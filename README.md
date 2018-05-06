@@ -39,7 +39,17 @@
 ## **参考方法：**
 
 1. 数据库设计：
-- WALog 表，存储原始Web访问日志。WALog 表中的所有记录按时间顺序依次存储，主键id 字段自增， IP 字段表示用户访问的IP 地址，Date 字段是用户访问该页面的访问时间，Method 字段取值为“GET”或者“POST”，URL 字段存储用户访问的资源，Version 字段是HTTP 协议的版本号，Status 字段表示该次访问是否成功，Bytes 字段表示发送的字节数，Refer 字段为引用页面值，BrowserOS 是指存储浏览器类型和操作系统类型。
+- WALog 表，存储原始Web访问日志。WALog 表中的所有记录按时间顺序依次存储，
+    - 主键id 字段自增， 
+    - IP 字段表示用户访问的IP 地址，
+    - Date 字段是用户访问该页面的访问时间，
+    - Method 字段取值为“GET”或者“POST”，
+    - URL 字段存储用户访问的资源，
+    - Version 字段是HTTP 协议的版本号，
+    - Status 字段表示该次访问是否成功，
+    - Bytes 字段表示发送的字节数，
+    - Refer 字段为引用页面值，
+    - BrowserOS 是指存储浏览器类型和操作系统类型。
 - CWALS 表，数据清理后的Web访问日志表，CWALog 表中包含ID， IP，Date，URL，Refer，Browse 字段，其含义与WALog 表中相同。 
 - UILog表，用户识别后的日志数据表，包含UID，IP，Date，URL，Refer 字段，其中UID 为每个用户的唯一标识，其他字段意义不变。 
 - USILog 表，用户会话识别后的日志数据表，包含USID，Date，URL，Refer 字段，其中USID为每个用户会话的唯一标识。 
